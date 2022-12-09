@@ -1,13 +1,9 @@
 import Container from 'components/Container';
 import FunctionCard from 'components/FunctionCard';
-import { InferGetStaticPropsType } from 'next';
-import { allSnippetsQuery } from 'lib/queries';
-import { getClient } from 'lib/sanity-server';
+// import { InferGetStaticPropsType } from 'next';
 import { Snippet } from 'lib/types';
 
-export default function Snippets({
-  snippets
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Snippets({ snippets }) {
   return (
     <Container
       title="Code Snippets – Lee Robinson"
@@ -24,7 +20,7 @@ export default function Snippets({
           scripts.
         </p>
         <div className="grid w-full grid-cols-1 gap-4 my-2 mt-4 sm:grid-cols-2">
-          {snippets.map((snippet) => (
+          {snippets?.map((snippet) => (
             <FunctionCard
               key={snippet.slug}
               title={snippet.title}
@@ -39,8 +35,8 @@ export default function Snippets({
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const snippets: Snippet[] = await getClient(preview).fetch(allSnippetsQuery);
+// export async function getStaticProps({ preview = false }) {
+//   const snippets: Snippet[] = await getClient(preview).fetch(allSnippetsQuery);
 
-  return { props: { snippets } };
-}
+//   return { props: { snippets } };
+// }

@@ -2,16 +2,12 @@ import { Suspense, useState } from 'react';
 
 import Container from 'components/Container';
 import BlogPost from 'components/BlogPost';
-import { InferGetStaticPropsType } from 'next';
-import { indexQuery } from 'lib/queries';
-import { getClient } from 'lib/sanity-server';
-import { Post } from 'lib/types';
+// import { InferGetStaticPropsType } from 'next';
+// import { Post } from 'lib/types';
 
-export default function Blog({
-  posts
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
-  const filteredBlogPosts = posts.filter((post) =>
+  const filteredBlogPosts = posts?.filter((post) =>
     post.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
@@ -26,7 +22,7 @@ export default function Blog({
         </h1>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
           {`I've been writing online since 2014, mostly about web development and tech careers.
-            In total, I've written ${posts.length} articles on my blog.
+            In total, I've written ${posts?.length} articles on my blog.
             Use the search below to filter by title.`}
         </p>
         <div className="relative w-full mb-4">
@@ -78,12 +74,12 @@ export default function Blog({
           <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
             All Posts
           </h3>
-          {!filteredBlogPosts.length && (
+          {!filteredBlogPosts?.length && (
             <p className="mb-4 text-gray-600 dark:text-gray-400">
               No posts found.
             </p>
           )}
-          {filteredBlogPosts.map((post) => (
+          {filteredBlogPosts?.map((post) => (
             <BlogPost
               key={post.title}
               slug={post.slug}
@@ -97,8 +93,8 @@ export default function Blog({
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const posts: Post[] = await getClient(preview).fetch(indexQuery);
+// export async function getStaticProps({ preview = false }) {
+//   const posts: Post[] = await getClient(preview).fetch(indexQuery);
 
-  return { props: { posts } };
-}
+//   return { props: { posts } };
+// }
