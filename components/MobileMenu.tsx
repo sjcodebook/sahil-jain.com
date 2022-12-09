@@ -61,56 +61,38 @@ export default function MobileMenu() {
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/guestbook" className="flex w-auto pb-4">
-              Guestbook
+            <Link href="/blogs" className="flex w-auto pb-4">
+              Blogs
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
-            <Link href="/dashboard" className="flex w-auto pb-4">
-              Dashboard
+            <Link href="/gists" className="flex w-auto pb-4">
+              Gists
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/blog" className="flex w-auto pb-4">
-              Blog
+            <Link href="/collections" className="flex w-auto pb-4">
+              Collections
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '275ms' }}
+            style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/snippets" className="flex w-auto pb-4">
-              Snippets
-            </Link>
-          </li>
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '300ms' }}
-          >
-            <Link href="/newsletter" className="flex w-auto pb-4">
-              Newsletter
-            </Link>
-          </li>
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '325ms' }}
-          >
-            <Link href="/tweets" className="flex w-auto pb-4">
-              Tweets
-            </Link>
-          </li>
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '350ms' }}
-          >
-            <Link href="/uses" className="flex w-auto pb-4">
-              Uses
+            <Link href="/collections" className="flex w-auto pb-4">
+              <span className="group relative inline-block focus:outline-none focus:ring dark:bg-gray-600">
+                <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+                <span className="relative inline-block border-2 border-current px-3 py-2 text-sm font-semibold  uppercase tracking-widest  group-active:text-opacity-75 ">
+                  <span className="dark:text-white">Résumé / CV</span>
+                </span>
+              </span>
             </Link>
           </li>
         </ul>

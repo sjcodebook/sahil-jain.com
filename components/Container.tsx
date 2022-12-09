@@ -8,7 +8,7 @@ import cn from 'classnames';
 import Footer from 'components/Footer';
 import MobileMenu from 'components/MobileMenu';
 
-function NavItem({ href, text }) {
+function NavItem({ href, text, gradientBtn = false }) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -19,10 +19,24 @@ function NavItem({ href, text }) {
         isActive
           ? 'font-semibold text-gray-800 dark:text-gray-200'
           : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+        cn(
+          gradientBtn
+            ? 'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg transition-all'
+            : 'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+        )
       )}
     >
-      <span className="capsize">{text}</span>
+      {gradientBtn ? (
+        <span className="group relative inline-block focus:outline-none focus:ring dark:bg-gray-600">
+          <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+          <span className="relative inline-block border-2 border-current px-3 py-2 text-sm font-semibold  uppercase tracking-widest  group-active:text-opacity-75 ">
+            <span className="dark:text-white">Résumé / CV</span>
+          </span>
+        </span>
+      ) : (
+        <span className="capsize">{text}</span>
+      )}
     </NextLink>
   );
 }
@@ -66,18 +80,18 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+      <div className="flex flex-col justify-center px-6">
+        <nav className="flex items-center justify-between w-full relative max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <a href="#skip" className="skip-nav">
             Skip to content
           </a>
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
-            <NavItem href="/guestbook" text="Guestbook" />
-            <NavItem href="/dashboard" text="Dashboard" />
-            <NavItem href="/blog" text="Blog" />
-            <NavItem href="/snippets" text="Snippets" />
+            <NavItem href="/blogs" text="Blogs" />
+            <NavItem href="/gists" text="Gists" />
+            <NavItem href="/collections" text="Collections" />
+            <NavItem href="/resume" text="Resume" gradientBtn />
           </div>
           <button
             aria-label="Toggle Dark Mode"
@@ -117,7 +131,7 @@ export default function Container(props) {
       </div>
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        className="flex flex-col justify-center px-6 bg-gray-50 dark:bg-gray-900"
       >
         {children}
         <Footer />
