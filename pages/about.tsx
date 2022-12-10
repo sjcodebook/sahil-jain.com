@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 import Container from 'components/Container';
 import avatar from 'public/avatar.jpg';
-import avatarBW from 'public/avatar-bw.jpg';
 
 export default function About() {
   return (
@@ -85,7 +84,7 @@ export default function About() {
                 alt="Lee Robinson headshot"
                 width={400}
                 quality={100}
-                src={avatarBW}
+                src={avatar}
                 className="rounded-md"
               />
             </a>
