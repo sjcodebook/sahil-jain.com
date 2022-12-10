@@ -80,6 +80,11 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
+      <div className=" px-4 py-1 text-white bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400">
+        <p className="text-center text-sm font-medium text-gray-800 dark:text-white">
+          I am actively looking for a new role.
+        </p>
+      </div>
       <div className="flex flex-col justify-center px-6">
         <nav className="flex items-center justify-between w-full relative max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <a href="#skip" className="skip-nav">
