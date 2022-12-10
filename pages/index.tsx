@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Tilt from 'react-parallax-tilt';
 
 import Container from '../components/Container';
 import BlogPostCard from '../components/BlogPostCard';
@@ -25,17 +26,19 @@ export default function Home() {
                 development, serverless, and React / Next.js.
               </p>
             </div>
-            <div className="w-[100px] sm:w-[190px] relative mb-8 sm:mb-0 mr-auto">
-              <Image
-                alt="Sahil Jain"
-                height={190}
-                width={190}
-                src="/avatar.jpg"
-                sizes="30vw"
-                priority
-                className="rounded-full filter grayscale"
-              />
-            </div>
+            <Tilt glareEnable={false}>
+              <div className="w-[100px] sm:w-[190px] relative mb-8 sm:mb-0 mr-auto">
+                <Image
+                  alt="Sahil Jain"
+                  height={190}
+                  width={190}
+                  src="/avatar.jpg"
+                  sizes="30vw"
+                  priority
+                  className="rounded-full filter grayscale"
+                />
+              </div>
+            </Tilt>
           </div>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
@@ -81,7 +84,7 @@ export default function Home() {
             </>
           </Link>
 
-          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
+          {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
             Learn React & Next.js
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -134,9 +137,9 @@ export default function Home() {
                 d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
               />
             </svg>
-          </a>
+          </a> */}
           <span className="h-16" />
-          <Subscribe />
+          {/* <Subscribe /> */}
         </div>
       </Container>
     </Suspense>

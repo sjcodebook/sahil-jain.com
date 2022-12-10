@@ -3348,6 +3348,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-parallax-tilt@^1.7.76:
+  version "1.7.76"
+  resolved "https://registry.npmjs.org/react-parallax-tilt/-/react-parallax-tilt-1.7.76.tgz#c5699dc1c97471f1eb4b0542b9a028cd0b477d79"
+  integrity sha512-aLFknLmDb67ALQyWFPZNYYNwLYO3JM+e5Vqx51jmkiMGMOmbjkzoghH2skqQuTq+l+BLxC5N0OyyTkiyfpFNww==
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
