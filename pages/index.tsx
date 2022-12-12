@@ -49,6 +49,13 @@ export default function Home() {
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
             Featured Blogs
           </h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            I write blogs on my website{' '}
+            <a href="https://webbrainsmedia.com/" className="underline">
+              webbrainsmedia.com
+            </a>
+            .
+          </p>
           <div className="flex gap-6 flex-col md:flex-row">
             <BlogPostCard
               title="The Console Object In Javascript"
@@ -92,60 +99,215 @@ export default function Home() {
             </>
           </Link>
 
-          {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
-            Learn React & Next.js
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 mt-16 text-black dark:text-white">
+            Work Experience
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Build and deploy a modern SaaS application using the most popular
-            open-source software. This course is 12 hours long and is completely
-            live streamed.
-          </p>
-          <VideoCard
-            index="01"
-            href="https://www.youtube.com/watch?v=MxR5I5_hOKk&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=2"
-            length="1:02:45"
-            title="Introduction to React 2025"
-          />
-          <VideoCard
-            index="02"
-            href="https://www.youtube.com/watch?v=AGl52moyISU&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=3"
-            length="54:22"
-            title="Firestore, Chakra UI, Absolute Imports"
-          />
-          <VideoCard
-            index="03"
-            href="https://www.youtube.com/watch?v=3g6-v3_BNbM&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=4"
-            length="1:08:30"
-            title="Designing & Building the Dashboard"
-          />
-          <VideoCard
-            index="04"
-            href="https://www.youtube.com/watch?v=u8iv_yhSRI8&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=5"
-            length="1:13:45"
-            title="Firebase Admin with Next.js + SWR"
-          />
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/playlist?list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1"
-            className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
-          >
-            Watch all videos
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="h-6 w-6 ml-1"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
-              />
-            </svg>
-          </a> */}
+          <ol className="relative border-l border-gray-200 dark:border-gray-700">
+            <li className="mb-10 ml-6">
+              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <Image
+                  alt="Parallel Finance"
+                  height={18}
+                  width={18}
+                  src="/static/images/parallel_logo.jpg"
+                  priority
+                  className="rounded-full shadow-lg"
+                />
+              </span>
+              <div
+                className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-700 dark:border-gray-600 backdrop-blur-lg
+               [ bg-gradient-to-b from-white/5 to-white/10 ]
+               [ shadow-black/20 shadow-2xl ]"
+              >
+                <div className="justify-between items-center mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                    Nov 2021 - Oct 2022 · 1 yr
+                  </time>
+                  <div className="text-sm font-normal text-gray-500 dark:text-gray-300">
+                    <div className="font-bold text-gray-900 dark:text-white">
+                      Web3 Developer
+                    </div>
+                    <a href="https://parallel.fi/" className="underline">
+                      Parallel Finance
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-200 rounded-lg border border-gray-200 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300">
+                  <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-200">
+                    <li>
+                      Worked on{' '}
+                      <a
+                        href="https://crowdloan.parallel.fi/#/"
+                        className="underline"
+                      >
+                        Polkadot and Kusama crowdloan App{' '}
+                      </a>
+                      UI.
+                    </li>
+                    <li>
+                      Worked on{' '}
+                      <a
+                        href="https://crowdloan.parallel.fi/#/"
+                        className="underline"
+                      >
+                        Para and Heiko claim{' '}
+                      </a>
+                      UI.
+                    </li>
+                    <li>
+                      Worked on{' '}
+                      <a
+                        href="https://app.parallel.fi/swap"
+                        className="underline"
+                      >
+                        Automated Market Maker (Swap and Liquidity Market) App{' '}
+                      </a>
+                      UI.
+                    </li>
+                    <li>
+                      Worked on{' '}
+                      <a
+                        href="https://app.parallel.fi/lendAndBorrow"
+                        className="underline"
+                      >
+                        Parallel Money Market App{' '}
+                      </a>
+                      UI.
+                    </li>
+                    <li>
+                      Created UI Components for Parallel Design System on
+                      Storybook.
+                    </li>
+                    <li>
+                      Worked on{' '}
+                      <a
+                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
+                        className="underline"
+                      >
+                        Parallel Wallet chrome extension's{' '}
+                      </a>
+                      UI for dashboard, transfers, etc.
+                    </li>
+                    <li>
+                      Enabled{' '}
+                      <a
+                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
+                        className="underline"
+                      >
+                        Parallel Wallet chrome extension{' '}
+                      </a>
+                      to be able to import assets from ledger wallet.
+                    </li>
+                    <li>
+                      Enabled{' '}
+                      <a
+                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
+                        className="underline"
+                      >
+                        Parallel Wallet chrome extension{' '}
+                      </a>{' '}
+                      to be able to sign transactions from ledger wallet.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li className="mb-10 ml-6">
+              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <Image
+                  alt="Coding Elements"
+                  height={18}
+                  width={18}
+                  src="/static/images/coding_el_logo.png"
+                  priority
+                  className="rounded-full shadow-lg"
+                />
+              </span>
+              <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                <div className="justify-between items-center mb-3 sm:flex">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                    2 hours ago
+                  </time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Thomas Lean commented on{' '}
+                    <a
+                      href="#"
+                      className="font-semibold text-gray-900 dark:text-white hover:underline"
+                    >
+                      Flowbite Pro
+                    </a>
+                  </div>
+                </div>
+                <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                  Hi ya'll! I wanted to share a webinar zeroheight is having
+                  regarding how to best measure your design system! This is the
+                  second session of our new webinar series on #DesignSystems
+                  discussions where we'll be speaking about Measurement.
+                </div>
+              </div>
+            </li>
+            <li className="mb-10 ml-6">
+              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <Image
+                  alt="RedcarpetUp"
+                  height={18}
+                  width={18}
+                  src="/static/images/redcarpet_logo.jpg"
+                  priority
+                  className="rounded-full shadow-lg"
+                />
+              </span>
+              <div className="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
+                <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                  1 day ago
+                </time>
+                <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                  Jese Leos has changed{' '}
+                  <a
+                    href="#"
+                    className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Pricing page
+                  </a>{' '}
+                  task status to{' '}
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    Finished
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li className="ml-6">
+              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <Image
+                  alt="Vayuz"
+                  height={18}
+                  width={18}
+                  src="/static/images/vayuz_logo.png"
+                  priority
+                  className="rounded-full shadow-lg"
+                />
+              </span>
+              <div className="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
+                <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                  1 day ago
+                </time>
+                <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                  Jese Leos has changed{' '}
+                  <a
+                    href="#"
+                    className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Pricing page
+                  </a>{' '}
+                  task status to{' '}
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    Finished
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ol>
+
           <span className="h-16" />
           {/* <Subscribe /> */}
         </div>
