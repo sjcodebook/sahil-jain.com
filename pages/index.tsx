@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Tilt from 'react-parallax-tilt';
 
+import siteData from '../data.json';
+
 import Container from '../components/Container';
 import BlogPostCard from '../components/BlogPostCard';
-import Subscribe from '../components/Subscribe';
-import VideoCard from '../components/VideoCard';
 
 export default function Home() {
   return (
@@ -57,24 +57,15 @@ export default function Home() {
             .
           </p>
           <div className="flex gap-6 flex-col md:flex-row">
-            <BlogPostCard
-              title="The Console Object In Javascript"
-              imageSrc="/static/images/js-console-object.png"
-              slug="the-console-object-in-javascript"
-              gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
-            />
-            <BlogPostCard
-              title="React Hooks Explained: useEffect( )"
-              imageSrc="/static/images/useeffect-hook-explained.png"
-              slug="react-hooks-explained-useEffect-hook"
-              gradient="from-[#D8B4FE] to-[#818CF8]"
-            />
-            <BlogPostCard
-              title="React Hooks Explained: useState( )"
-              imageSrc="/static/images/usestate-hook-explained.png"
-              slug="react-hooks-explained-useState"
-              gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
-            />
+            {siteData.featured_blogs.map((blog) => (
+              <BlogPostCard
+                key={blog.slug}
+                title={blog.title}
+                imageSrc={blog.imageSrc}
+                slug={blog.slug}
+                gradient={blog.gradient}
+              />
+            ))}
           </div>
           <Link
             href="/blog"
@@ -103,212 +94,69 @@ export default function Home() {
             Work Experience
           </h3>
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
-            <li className="mb-10 ml-6">
-              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <Image
-                  alt="Parallel Finance"
-                  height={18}
-                  width={18}
-                  src="/static/images/parallel_logo.jpg"
-                  priority
-                  className="rounded-full shadow-lg"
-                />
-              </span>
-              <div
-                className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-700 dark:border-gray-600 backdrop-blur-lg
+            {siteData.work_experience.map((work) => (
+              <li className="mb-10 ml-6" key={work.company}>
+                <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <Image
+                    alt={work.company}
+                    height={18}
+                    width={18}
+                    src={work.company_logo_src}
+                    priority
+                    className="rounded-full shadow-lg"
+                  />
+                </span>
+                <div
+                  className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-700 dark:border-gray-600 backdrop-blur-lg
                [ bg-gradient-to-b from-white/5 to-white/10 ]
                [ shadow-black/20 shadow-2xl ]"
-              >
-                <div className="justify-between items-center mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
-                    Nov 2021 - Oct 2022 · 1 yr
-                  </time>
-                  <div className="text-sm font-normal text-gray-500 dark:text-gray-300">
-                    <div className="font-bold text-gray-900 dark:text-white">
-                      Web3 Developer
+                >
+                  <div className="justify-between items-center mb-3 sm:flex">
+                    <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                      {work.date}
+                    </time>
+                    <div className="text-sm font-normal text-gray-500 dark:text-gray-300">
+                      <div className="font-bold text-gray-900 dark:text-white">
+                        {work.position}
+                      </div>
+                      <a href={work.company_website} className="underline">
+                        {work.company}
+                      </a>
                     </div>
-                    <a href="https://parallel.fi/" className="underline">
-                      Parallel Finance
-                    </a>
+                  </div>
+                  <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-200 rounded-lg border border-gray-200 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300">
+                    <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-200">
+                      {work.description.map((desc) => {
+                        let result = '';
+                        desc.forEach((d) => {
+                          if (d.type === 'text') {
+                            result += ' ' + d.text;
+                          }
+                          if (d.type === 'link') {
+                            result += ` <a href="${d.href}" class="underline">${d.text}</a>`;
+                          }
+                        });
+                        return (
+                          <li
+                            key={JSON.stringify(desc)}
+                            dangerouslySetInnerHTML={{ __html: result }}
+                          />
+                        );
+                      })}
+                    </ul>
                   </div>
                 </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-200 rounded-lg border border-gray-200 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300">
-                  <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-200">
-                    <li>
-                      Worked on{' '}
-                      <a
-                        href="https://crowdloan.parallel.fi/#/"
-                        className="underline"
-                      >
-                        Polkadot and Kusama crowdloan App{' '}
-                      </a>
-                      UI.
-                    </li>
-                    <li>
-                      Worked on{' '}
-                      <a
-                        href="https://crowdloan.parallel.fi/#/"
-                        className="underline"
-                      >
-                        Para and Heiko claim{' '}
-                      </a>
-                      UI.
-                    </li>
-                    <li>
-                      Worked on{' '}
-                      <a
-                        href="https://app.parallel.fi/swap"
-                        className="underline"
-                      >
-                        Automated Market Maker (Swap and Liquidity Market) App{' '}
-                      </a>
-                      UI.
-                    </li>
-                    <li>
-                      Worked on{' '}
-                      <a
-                        href="https://app.parallel.fi/lendAndBorrow"
-                        className="underline"
-                      >
-                        Parallel Money Market App{' '}
-                      </a>
-                      UI.
-                    </li>
-                    <li>
-                      Created UI Components for Parallel Design System on
-                      Storybook.
-                    </li>
-                    <li>
-                      Worked on{' '}
-                      <a
-                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
-                        className="underline"
-                      >
-                        Parallel Wallet chrome extension's{' '}
-                      </a>
-                      UI for dashboard, transfers, etc.
-                    </li>
-                    <li>
-                      Enabled{' '}
-                      <a
-                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
-                        className="underline"
-                      >
-                        Parallel Wallet chrome extension{' '}
-                      </a>
-                      to be able to import assets from ledger wallet.
-                    </li>
-                    <li>
-                      Enabled{' '}
-                      <a
-                        href="https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia"
-                        className="underline"
-                      >
-                        Parallel Wallet chrome extension{' '}
-                      </a>{' '}
-                      to be able to sign transactions from ledger wallet.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="mb-10 ml-6">
-              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <Image
-                  alt="Coding Elements"
-                  height={18}
-                  width={18}
-                  src="/static/images/coding_el_logo.png"
-                  priority
-                  className="rounded-full shadow-lg"
-                />
-              </span>
-              <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-700 dark:border-gray-600">
-                <div className="justify-between items-center mb-3 sm:flex">
-                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
-                    2 hours ago
-                  </time>
-                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                    Thomas Lean commented on{' '}
-                    <a
-                      href="#"
-                      className="font-semibold text-gray-900 dark:text-white hover:underline"
-                    >
-                      Flowbite Pro
-                    </a>
-                  </div>
-                </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                  Hi ya'll! I wanted to share a webinar zeroheight is having
-                  regarding how to best measure your design system! This is the
-                  second session of our new webinar series on #DesignSystems
-                  discussions where we'll be speaking about Measurement.
-                </div>
-              </div>
-            </li>
-            <li className="mb-10 ml-6">
-              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <Image
-                  alt="RedcarpetUp"
-                  height={18}
-                  width={18}
-                  src="/static/images/redcarpet_logo.jpg"
-                  priority
-                  className="rounded-full shadow-lg"
-                />
-              </span>
-              <div className="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
-                <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
-                  1 day ago
-                </time>
-                <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                  Jese Leos has changed{' '}
-                  <a
-                    href="#"
-                    className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Pricing page
-                  </a>{' '}
-                  task status to{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">
-                    Finished
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="ml-6">
-              <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <Image
-                  alt="Vayuz"
-                  height={18}
-                  width={18}
-                  src="/static/images/vayuz_logo.png"
-                  priority
-                  className="rounded-full shadow-lg"
-                />
-              </span>
-              <div className="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
-                <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
-                  1 day ago
-                </time>
-                <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
-                  Jese Leos has changed{' '}
-                  <a
-                    href="#"
-                    className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
-                  >
-                    Pricing page
-                  </a>{' '}
-                  task status to{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">
-                    Finished
-                  </span>
-                </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ol>
-
-          <span className="h-16" />
+          <Image
+            alt="Starting Point"
+            height={40}
+            width={40}
+            src="/static/images/rocket.svg"
+            className="-ml-5"
+          />
+          {/* <span className="h-16" /> */}
           {/* <Subscribe /> */}
         </div>
       </Container>
@@ -325,7 +173,7 @@ const getChillingSvg = () => {
       xmlns="http://www.w3.org/2000/svg"
       className="text-black dark:text-gray-200"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <g fill="#FF5678">
           <path d="M521.9193,324.8337 C559.2843,321.8617 594.9323,335.7857 624.7963,357.4877 C663.2863,385.4587 695.9093,425.4607 717.9913,467.6117 C720.3403,469.4207 722.6543,471.2757 724.9523,473.1477 C737.2423,483.1597 749.2493,493.7347 759.8923,505.5047 C765.8343,512.0747 781.4193,528.0507 774.6533,538.1277 C773.2173,540.2677 770.8593,541.4957 768.4973,542.3427 C761.8753,544.7137 754.9723,545.9147 748.4413,548.6887 C740.3793,552.1117 732.0193,556.9057 726.8543,564.2147 C725.3853,566.2937 725.0023,568.7467 723.0273,569.6627 C720.9333,570.6347 716.9853,570.2557 714.6963,570.4797 C710.0953,570.9317 705.4933,571.3827 700.8913,571.8327 C690.0803,572.8927 678.7793,573.0097 668.2033,575.6207 L619.5503,587.6337 C609.5993,590.0907 598.1623,591.4447 588.7253,595.4827 C574.6433,601.5097 561.2083,610.3337 547.7333,617.6057 C541.2183,621.1217 534.7023,624.6387 528.1863,628.1547 C525.0043,629.8727 522.8263,629.8957 519.0973,630.1827 L492.1873,632.2527 C487.8463,632.5867 485.7623,634.3347 485.1933,629.9907 L478.9383,582.2327 L475.6323,556.9787 C475.4353,555.4767 475.4933,548.0367 474.2623,547.1387 C473.4903,546.5757 468.9603,547.7877 468.1223,547.8907 L455.9083,549.3867 C447.1113,550.4637 438.3153,551.5407 429.5183,552.6177 C428.8043,552.7047 424.8493,552.6597 424.4053,553.2437 C423.8853,553.9287 424.8743,557.8547 424.9633,558.6997 C425.8963,567.5677 426.8303,576.4357 427.7633,585.3037 C427.8723,586.3317 429.1213,591.1007 428.4633,591.9447 C428.0053,592.5307 424.6913,592.6017 424.0183,592.7117 C415.5323,594.0967 407.0473,595.4817 398.5613,596.8677 C392.4843,597.8597 384.5423,597.8097 378.7973,600.0947 C375.4983,601.4067 372.2343,604.7617 369.3843,606.8587 L327.9983,637.3127 C321.7213,641.9307 313.2613,640.7547 305.6173,641.3367 L217.4403,648.0547 C217.5133,645.3087 217.5873,642.5627 217.6603,639.8157 C218.0483,625.2707 218.4353,610.7257 218.8233,596.1807 L219.3313,577.1567 C219.3633,575.9527 218.8823,572.4297 219.6693,571.5397 C220.7153,570.3587 225.3903,569.8467 226.8413,569.4167 C231.7083,567.9757 236.5743,566.5357 241.4403,565.0957 C255.7173,560.8697 269.9923,556.6437 284.2683,552.4187 C298.3783,548.2427 312.4863,544.0657 326.5953,539.8897 C331.4233,538.4607 336.2503,537.0317 341.0773,535.6027 C342.1923,535.2727 346.0873,534.8337 346.8623,533.8907 C347.8393,532.7027 347.4023,527.6337 347.5583,526.1277 C348.3243,518.7787 349.4163,511.4627 350.7463,504.1957 C360.3383,451.7777 382.7573,398.5337 424.3263,363.5647 C451.8043,340.4487 486.2723,327.6687 521.9193,324.8337 Z M528.5093,429.9497 C524.8103,425.6067 518.5963,418.5217 512.0613,419.6977 C506.7503,420.6537 503.8563,427.2377 502.0053,431.6147 C494.5643,449.2067 492.2563,469.3717 489.9423,488.1727 C488.4903,499.9697 487.3223,511.8187 486.5753,523.6817 C513.0813,521.6427 539.5873,519.6037 566.0933,517.5647 C564.8423,509.1187 563.8393,500.5947 562.3333,492.1897 C561.5783,487.9767 559.4903,484.1837 557.7053,480.2917 C549.7213,462.8837 541.0063,444.6227 528.5093,429.9497 Z"></path>
         </g>

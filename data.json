@@ -1,0 +1,255 @@
+{
+  "featured_blogs": [
+    {
+      "title": "The Console Object In Javascript",
+      "imageSrc": "/static/images/js-console-object.png",
+      "slug": "the-console-object-in-javascript",
+      "gradient": "from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+    },
+    {
+      "title": "React Hooks Explained: useEffect( )",
+      "imageSrc": "/static/images/useeffect-hook-explained.png",
+      "slug": "react-hooks-explained-useEffect-hook",
+      "gradient": "from-[#D8B4FE] to-[#818CF8]"
+    },
+    {
+      "title": "React Hooks Explained: useState( )",
+      "imageSrc": "/static/images/usestate-hook-explained.png",
+      "slug": "react-hooks-explained-useState",
+      "gradient": "from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Parallel Finance",
+      "company_website": "https://parallel.fi/",
+      "company_logo_src": "/static/images/parallel_logo.jpg",
+      "position": "Web3 Developer",
+      "date": "Nov 2021 - Oct 2022 · 1 yr",
+      "description": [
+        [
+          {
+            "type": "text",
+            "text": "Worked on"
+          },
+          {
+            "type": "link",
+            "href": "https://crowdloan.parallel.fi/#/",
+            "text": "Polkadot and Kusama crowdloan App"
+          },
+          {
+            "type": "text",
+            "text": "UI."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Worked on"
+          },
+          {
+            "type": "link",
+            "href": "https://crowdloan.parallel.fi/#/",
+            "text": "Para and Heiko claim"
+          },
+          {
+            "type": "text",
+            "text": "UI."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Worked on"
+          },
+          {
+            "type": "link",
+            "href": "https://app.parallel.fi/swap",
+            "text": "Automated Market Maker (Swap and Liquidity Market) App"
+          },
+          {
+            "type": "text",
+            "text": "UI."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Worked on"
+          },
+          {
+            "type": "link",
+            "href": "https://app.parallel.fi/lendAndBorrow",
+            "text": "Parallel Money Market App"
+          },
+          {
+            "type": "text",
+            "text": "UI."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Created UI Components for Parallel Design System on Storybook."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Worked on"
+          },
+          {
+            "type": "link",
+            "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
+            "text": "Parallel Wallet chrome extension's"
+          },
+          {
+            "type": "text",
+            "text": "UI for dashboard, transfers, etc."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Enabled"
+          },
+          {
+            "type": "link",
+            "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
+            "text": "Parallel Wallet chrome extension"
+          },
+          {
+            "type": "text",
+            "text": "to be able to import assets from ledger wallet."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Enabled"
+          },
+          {
+            "type": "link",
+            "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
+            "text": "Parallel Wallet chrome extension"
+          },
+          {
+            "type": "text",
+            "text": "to be able to sign transactions from ledger wallet."
+          }
+        ]
+      ]
+    },
+    {
+      "company": "Coding Elements",
+      "company_website": "https://www.codingelements.com/",
+      "company_logo_src": "/static/images/coding_el_logo.png",
+      "position": "Full-Stack Web Developer",
+      "date": "Jul 2020 - Oct 2021 · 1 yr 4 mos",
+      "description": [
+        [
+          {
+            "type": "text",
+            "text": "Maintained the Coding Elements public facing website written In NextJs."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Added Features like Class Scheduler, Certificate Generator, Course Progress tracker etc. in Coding Elements Ops Platform written in ReactJs."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Maintained The Coding Elements E-Learning Platform written in React]s and uses Firebase’s functions, db, hosting and auth services."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Integrated Coding Elements python learning module with Government Of India's Atal Tinkering Labs Project."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Developed APIs to enable integration of Coding Elements Learning Modules with third party E-learning platforms."
+          }
+        ]
+      ]
+    },
+    {
+      "company": "RedCarpetUp.com",
+      "company_website": "https://www.redcarpetup.com/",
+      "company_logo_src": "/static/images/redcarpet_logo.jpg",
+      "position": "Full-Stack Web Developer Intern",
+      "date": "Nov 2019 - May 2020 · 7 mos",
+      "description": [
+        [
+          {
+            "type": "text",
+            "text": "Maintained the official website redcarpetup.com."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Developed full funnel for card lost and claim process."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Developed rewards program for the official redcarpetUp app."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Integrated Code Coverage tools to Automation frameworks."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Maintained and added features in Primer (in-house developed ops platform in react.js."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Scoped, implemented, tested, and deployed new features and versions of core applications, databases, and utilities."
+          }
+        ]
+      ]
+    },
+    {
+      "company": "VAYUZ Technologies",
+      "company_website": "https://www.vayuz.com/",
+      "company_logo_src": "/static/images/vayuz_logo.png",
+      "position": "Full-Stack Web Developer Intern",
+      "date": "Sep 2019 - Nov 2019 · 3 mos",
+      "description": [
+        [
+          {
+            "type": "text",
+            "text": "Employed an agile development process with daily standups and Trello for task management."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Intimately familiar with UI/UX styling frameworks including Bootstrap, Foundation, and Semantic UI."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Developed web applications using meteor.js"
+          }
+        ]
+      ]
+    }
+  ]
+}
