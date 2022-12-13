@@ -10,9 +10,11 @@ export default function BlogPostCard({ title, slug, gradient, imageSrc }) {
       target="_blank"
       className={cn(
         'transform hover:scale-[1.01] transition-all',
-        'rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1',
-        gradient
+        'rounded-xl w-full md:w-1/3 p-1'
       )}
+      style={{
+        backgroundImage: gradient
+      }}
     >
       <Tilt
         className="h-full w-full"

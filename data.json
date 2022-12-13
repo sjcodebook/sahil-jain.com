@@ -3,20 +3,17 @@
     {
       "title": "The Console Object In Javascript",
       "imageSrc": "/static/images/js-console-object.png",
-      "slug": "the-console-object-in-javascript",
-      "gradient": "from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+      "slug": "the-console-object-in-javascript"
     },
     {
       "title": "React Hooks Explained: useEffect( )",
       "imageSrc": "/static/images/useeffect-hook-explained.png",
-      "slug": "react-hooks-explained-useEffect-hook",
-      "gradient": "from-[#D8B4FE] to-[#818CF8]"
+      "slug": "react-hooks-explained-useEffect-hook"
     },
     {
       "title": "React Hooks Explained: useState( )",
       "imageSrc": "/static/images/usestate-hook-explained.png",
-      "slug": "react-hooks-explained-useState",
-      "gradient": "from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+      "slug": "react-hooks-explained-useState"
     }
   ],
   "work_experience": [
