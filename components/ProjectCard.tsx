@@ -35,7 +35,7 @@ export default function ProjectCard({
           [ bg-gradient-to-b from-white/5 to-white/10 ]
           [ shadow-black/20 shadow-2xl ]"
         >
-          <div className="h-36">
+          <div className="h-44 md:h-32">
             <Image
               alt="Sahil Jain"
               height={200}

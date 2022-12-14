@@ -3,16 +3,23 @@ import cn from 'classnames';
 import Tilt from 'react-parallax-tilt';
 import Image from 'next/image';
 
-export default function BlogPostCard({ title, slug, gradient, imageSrc }) {
+export default function BlogPostCard({
+  title,
+  slug,
+  gradient,
+  imageSrc,
+  style = {}
+}) {
   return (
     <Link
       href={`https://webbrainsmedia.com/blogs/${slug}`}
       target="_blank"
       className={cn(
         'transform hover:scale-[1.01] transition-all',
-        'rounded-xl w-full md:w-1/3 p-1'
+        'rounded-xl w-full md:w-[32%] p-1'
       )}
       style={{
+        ...style,
         backgroundImage: gradient
       }}
     >
@@ -28,15 +35,17 @@ export default function BlogPostCard({ title, slug, gradient, imageSrc }) {
                [ bg-gradient-to-b from-white/5 to-white/10 ]
                [ shadow-black/20 shadow-2xl ]"
         >
-          <Image
-            alt="Sahil Jain"
-            height={200}
-            width={200}
-            src={imageSrc}
-            className="rounded-md w-full mb-3"
-            priority
-          />
-          <div className="flex flex-row justify-start ">
+          <div className="h-44 md:h-32">
+            <Image
+              alt="Sahil Jain"
+              height={200}
+              width={200}
+              src={imageSrc}
+              className="rounded-md w-full h-full"
+              priority
+            />
+          </div>
+          <div className="flex flex-row justify-start mt-3">
             <h4 className="text-lg  font-medium  w-full text-gray-900 dark:text-gray-100">
               {title}{' '}
               <svg

@@ -23,7 +23,9 @@ export const Hero = () => (
             Full Stack Web3 Developer
           </h2>
         </div>
-        {getChillingSvg()}
+        <div className="transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2">
+          {getChillingSvg()}
+        </div>
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-16">
         Helping developers build a faster web. Teaching about web development,
@@ -63,7 +65,7 @@ export const FeaturedBlogs = ({ classes = '' }) => (
       </a>
       .
     </p>
-    <div className="flex gap-6 flex-col md:flex-row">
+    <div className="flex flex-wrap basis-1/3 flex-col md:flex-row justify-between">
       {siteData.blogs
         .filter((blog) => blog.isFeatured)
         .map((blog) => (
@@ -73,12 +75,15 @@ export const FeaturedBlogs = ({ classes = '' }) => (
             imageSrc={blog.imageSrc}
             slug={blog.slug}
             gradient={getRandomGradientColor()}
+            style={{
+              marginBottom: '1rem'
+            }}
           />
         ))}
     </div>
     <Link
       href="/blog"
-      className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
+      className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
     >
       {'Read all blogs'}
       <svg

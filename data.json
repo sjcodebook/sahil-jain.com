@@ -17,6 +17,24 @@
       "imageSrc": "/static/images/usestate-hook-explained.png",
       "slug": "react-hooks-explained-useState",
       "isFeatured": true
+    },
+    {
+      "title": "Create FAB Using React Material UI",
+      "imageSrc": "/static/images/fab-btn.png",
+      "slug": "how-to-create-a-floating-action-button-using-material-ui-in-react",
+      "isFeatured": true
+    },
+    {
+      "title": "Migrate From Remark To MDX In Gatsby",
+      "imageSrc": "/static/images/remark-to-mdx.png",
+      "slug": "remark-to-mdx-in-gatsby",
+      "isFeatured": true
+    },
+    {
+      "title": "Connect To GitHub Using SSH",
+      "imageSrc": "/static/images/github-ssh.png",
+      "slug": "connect-to-github-using-ssh",
+      "isFeatured": true
     }
   ],
   "projects": [
