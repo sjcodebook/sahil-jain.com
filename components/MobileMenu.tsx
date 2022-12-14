@@ -61,31 +61,47 @@ export default function MobileMenu() {
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/blogs" className="flex w-auto pb-4">
-              Blogs
+            <Link href="/about" className="flex w-auto pb-4">
+              About
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
-            <Link href="/gists" className="flex w-auto pb-4">
-              Gists
+            <Link href="/contact" className="flex w-auto pb-4">
+              Contact
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/collections" className="flex w-auto pb-4">
-              Collections
+            <Link
+              href="https://github.com/sjcodebook"
+              target="_blank"
+              className="flex w-auto pb-4"
+            >
+              Github
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/collections" className="flex w-auto pb-4">
+            <Link
+              href="https://www.linkedin.com/in/sjcodebook/"
+              target="_blank"
+              className="flex w-auto pb-4"
+            >
+              LinkedIn
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            <Link href="/resume" className="flex w-auto pb-4">
               <span className="group relative inline-block focus:outline-none focus:ring dark:bg-gray-600">
                 <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
 

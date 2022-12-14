@@ -8,13 +8,14 @@ import cn from 'classnames';
 import Footer from 'components/Footer';
 import MobileMenu from 'components/MobileMenu';
 
-function NavItem({ href, text, gradientBtn = false }) {
+function NavItem({ href, text, gradientBtn = false, outbound = false }) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
   return (
     <NextLink
       href={href}
+      target={outbound ? '_blank' : ''}
       className={cn(
         isActive
           ? 'font-semibold text-gray-800 dark:text-gray-200'
@@ -31,7 +32,7 @@ function NavItem({ href, text, gradientBtn = false }) {
           <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
           <span className="relative inline-block border-2 border-current px-3 py-2 text-sm font-semibold  uppercase tracking-widest  group-active:text-opacity-75 ">
-            <span className="dark:text-white">Résumé / CV</span>
+            <span className="dark:text-white">{text}</span>
           </span>
         </span>
       ) : (
@@ -96,10 +97,19 @@ export default function Container(props) {
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
-            <NavItem href="/blogs" text="Blogs" />
-            <NavItem href="/gists" text="Gists" />
-            <NavItem href="/collections" text="Collections" />
-            <NavItem href="/resume" text="Resume" gradientBtn />
+            <NavItem href="/about" text="About" />
+            <NavItem href="/contact" text="Contact" />
+            <NavItem
+              href="https://github.com/sjcodebook"
+              text="Github"
+              outbound
+            />
+            <NavItem
+              href="https://www.linkedin.com/in/sjcodebook/"
+              text="LinkedIn"
+              outbound
+            />
+            <NavItem href="/resume" text="Résumé / CV" gradientBtn />
           </div>
           <button
             aria-label="Toggle Dark Mode"
