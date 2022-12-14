@@ -159,13 +159,6 @@ export const FeaturedProjects = ({ classes = '' }) => (
     <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
       Featured Projects
     </h3>
-    <p className="text-gray-600 dark:text-gray-400 mb-4">
-      I write blogs on my website{' '}
-      <a href="https://webbrainsmedia.com/" className="underline">
-        webbrainsmedia.com
-      </a>
-      .
-    </p>
     <div className="flex gap-6 flex-col md:flex-row">
       {siteData.blogs
         .filter((blog) => blog.isFeatured)
