@@ -1,12 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
 import Container from 'components/Container';
-import avatar from 'public/avatar.jpg';
 
 export default function About() {
   return (
-    <Container title="About – Lee Robinson">
+    <Container title="About – Sahil Jain">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           About Me
@@ -15,34 +13,53 @@ export default function About() {
           <h2>Links</h2>
           <ul>
             <li>
-              Twitter: <a href="https://twitter.com/leeerob">@leeerob</a>
+              Website:{' '}
+              <a target="_blank" rel="noreferrer" href="https://sahiljain.io">
+                https://sahiljain.io
+              </a>
             </li>
             <li>
-              GitHub: <a href="https://github.com/leerob">@leerob</a>
+              Blogging Website:{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://webbrainsmedia.com/"
+              >
+                https://webbrainsmedia.com/
+              </a>
             </li>
             <li>
-              Website: <Link href="https://leerob.io">https://leerob.io</Link>
+              GitHub:{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/sjcodebook"
+              >
+                @sjcodebook
+              </a>
             </li>
             <li>
               LinkedIn:{' '}
-              <a href="https://www.linkedin.com/in/leeerob/">
-                https://www.linkedin.com/in/leeerob
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/sjcodebook/"
+              >
+                @sjcodebook
+              </a>
+            </li>
+            <li>
+              FB Page:{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/webbrainsmedia"
+              >
+                @webbrainsmedia
               </a>
             </li>
           </ul>
           <h2>Bio</h2>
-          <h3>Job Title</h3>
-          <p>Lee Robinson, VP of Developer Experience at Vercel</p>
-          <h3>Long, 3rd Person</h3>
-          <p>
-            Lee Robinson is the VP of Developer Experience at{' '}
-            <a href="http://vercel.com/">Vercel</a>, where he helps developers
-            build a faster web and leads the Next.js community. He leads the
-            community for the React framework Next.js and is an open-source
-            contributor. An educator, writer, and speaker, Lee has created
-            courses on React, Next.js, and web development.
-          </p>
-          <h3>Long, 1st Person</h3>
           <p>
             Hey, I'm Lee. I'm the VP of Developer Experience at{' '}
             <a href="https://vercel.com/">Vercel</a>, where my team helps
@@ -51,40 +68,67 @@ export default function About() {
             development and have created courses on React, Next.js, and web
             development. I'm an advisor and investor in early stage startups.
           </p>
-          <h3>Short, 3rd Person</h3>
-          <p>
-            Lee Robinson is the VP of Developer Experience at{' '}
-            <a href="http://vercel.com/">Vercel</a>, where he helps developers
-            build a faster web.
-          </p>
-          <h3>Short, 1st Person</h3>
-          <p>
-            Hey, I'm Lee. I'm the VP of Developer Experience at{' '}
-            <a href="https://vercel.com/">Vercel</a>, where my team helps
-            developers build a faster web.
-          </p>
-          <h3>Education</h3>
-          <p>
-            Lee Robinson graduated from Iowa State University with a B.S. in
-            Computer Engineering.
-          </p>
-          <h2>Headshots</h2>
-          <div className="flex space-x-8">
-            <a href="/avatar.jpg">
+          <h2>Some Random Pics</h2>
+          <div className="flex space-x-4">
+            <a href="/static/images/sahil-jain-334.jpg">
               <Image
-                alt="Lee Robinson headshot"
+                alt="Sahil Jain Pics"
                 width={400}
+                height={400}
                 quality={100}
-                src={avatar}
+                src="/static/images/sahil-jain-334.jpg"
                 className="rounded-md"
               />
             </a>
-            <a href="/avatar-bw.jpg">
+            <a href="/static/images/sahil-jain-3232.jpg">
               <Image
-                alt="Lee Robinson headshot"
+                alt="Sahil Jain Pics"
                 width={400}
+                height={400}
                 quality={100}
-                src={avatar}
+                src="/static/images/sahil-jain-3232.jpg"
+                className="rounded-md"
+              />
+            </a>
+            <a href="/static/images/sahil-jain-4334.jpg">
+              <Image
+                alt="Sahil Jain Pics"
+                width={400}
+                height={400}
+                quality={100}
+                src="/static/images/sahil-jain-4334.jpg"
+                className="rounded-md"
+              />
+            </a>
+          </div>
+          <div className="flex space-x-4 mt-3">
+            <a href="/static/images/sahil-jain-223.jpg">
+              <Image
+                alt="Sahil Jain Pics"
+                width={400}
+                height={400}
+                quality={100}
+                src="/static/images/sahil-jain-223.jpg"
+                className="rounded-md"
+              />
+            </a>
+            <a href="/static/images/sahil-jain-333.jpg">
+              <Image
+                alt="Sahil Jain Pics"
+                width={400}
+                height={400}
+                quality={100}
+                src="/static/images/sahil-jain-333.jpg"
+                className="rounded-md"
+              />
+            </a>
+            <a href="/static/images/sahil-jain-1212.jpg">
+              <Image
+                alt="Sahil Jain Pics"
+                width={400}
+                height={400}
+                quality={100}
+                src="/static/images/sahil-jain-1212.jpg"
                 className="rounded-md"
               />
             </a>

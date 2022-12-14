@@ -37,9 +37,10 @@ export default function ProjectCard({
         >
           <div className="h-44 md:h-32">
             <Image
-              alt="Sahil Jain"
+              alt={title}
               height={200}
               width={200}
+              quality={100}
               src={imageSrc}
               className="rounded-md w-full h-full"
               priority

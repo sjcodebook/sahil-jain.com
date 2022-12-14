@@ -40,6 +40,7 @@ export default function BlogPostCard({
               alt={title}
               height={200}
               width={200}
+              quality={100}
               src={imageSrc}
               className="rounded-md w-full h-full"
               priority
