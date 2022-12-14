@@ -1,19 +1,22 @@
 {
-  "featured_blogs": [
+  "blogs": [
     {
       "title": "The Console Object In Javascript",
       "imageSrc": "/static/images/js-console-object.png",
-      "slug": "the-console-object-in-javascript"
+      "slug": "the-console-object-in-javascript",
+      "isFeatured": true
     },
     {
       "title": "React Hooks Explained: useEffect( )",
       "imageSrc": "/static/images/useeffect-hook-explained.png",
-      "slug": "react-hooks-explained-useEffect-hook"
+      "slug": "react-hooks-explained-useEffect-hook",
+      "isFeatured": true
     },
     {
       "title": "React Hooks Explained: useState( )",
       "imageSrc": "/static/images/usestate-hook-explained.png",
-      "slug": "react-hooks-explained-useState"
+      "slug": "react-hooks-explained-useState",
+      "isFeatured": true
     }
   ],
   "work_experience": [

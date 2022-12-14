@@ -2,16 +2,19 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tilt from 'react-parallax-tilt';
+import fs from 'fs';
+import path from 'path';
 
 import siteData from '../data.json';
 
 import Container from '../components/Container';
 import BlogPostCard from '../components/BlogPostCard';
+import CollectionCard from '../components/CollectionCard';
 import WorkExperienceCard from '../components/WorkExperienceCard';
 
 import { getRandomGradientColor } from '../utils/common';
 
-export default function Home() {
+export default function Home({ collections = [] }) {
   return (
     <Suspense fallback={null}>
       <Container>
@@ -35,7 +38,12 @@ export default function Home() {
               </p>
             </div>
             <Tilt glareEnable={false}>
-              <div className="w-[100px] sm:w-[190px] relative mb-8 sm:mb-0 mr-auto">
+              <div
+                className="w-[100px] sm:w-[190px] relative mb-8 sm:mb-0 mr-auto rounded-full p-1"
+                style={{
+                  backgroundImage: getRandomGradientColor()
+                }}
+              >
                 <Image
                   alt="Sahil Jain"
                   height={190}
@@ -60,15 +68,17 @@ export default function Home() {
             .
           </p>
           <div className="flex gap-6 flex-col md:flex-row">
-            {siteData.featured_blogs.map((blog) => (
-              <BlogPostCard
-                key={blog.slug}
-                title={blog.title}
-                imageSrc={blog.imageSrc}
-                slug={blog.slug}
-                gradient={getRandomGradientColor()}
-              />
-            ))}
+            {siteData.blogs
+              .filter((blog) => blog.isFeatured)
+              .map((blog) => (
+                <BlogPostCard
+                  key={blog.slug}
+                  title={blog.title}
+                  imageSrc={blog.imageSrc}
+                  slug={blog.slug}
+                  gradient={getRandomGradientColor()}
+                />
+              ))}
           </div>
           <Link
             href="/blog"
@@ -99,10 +109,86 @@ export default function Home() {
           <WorkExperienceCard />
           {/* <span className="h-16" /> */}
           {/* <Subscribe /> */}
+
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 mt-16 text-black dark:text-white">
+            Featured Collections
+          </h3>
+          <div className="flex flex-wrap basis-1/3 flex-col md:flex-row justify-between">
+            {collections.map((post) => {
+              if (post.includes('__featured__')) {
+                return (
+                  <CollectionCard
+                    key={post}
+                    imageSrc={`/static/images/all-posts/${post}`}
+                    slug={post}
+                    gradient={getRandomGradientColor()}
+                    style={{
+                      marginBottom: '1rem'
+                    }}
+                  />
+                );
+              }
+            })}
+          </div>
+          <Link
+            href="/blog"
+            className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
+          >
+            <>
+              {'See all Collections'}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 ml-1"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
+                />
+              </svg>
+            </>
+          </Link>
+
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 mt-16 text-black dark:text-white">
+            Featured Projects
+          </h3>
+          <div className="flex flex-wrap basis-1/3 flex-col md:flex-row justify-between">
+            {siteData.blogs
+              .filter((blog) => blog.isFeatured)
+              .map((blog) => (
+                <CollectionCard
+                  key={blog.slug}
+                  imageSrc={blog.imageSrc}
+                  slug={blog.slug}
+                  gradient={getRandomGradientColor()}
+                  style={{
+                    marginBottom: '1rem'
+                  }}
+                />
+              ))}
+          </div>
         </div>
       </Container>
     </Suspense>
   );
+}
+
+export async function getServerSideProps() {
+  const collections = [];
+  fs.readdirSync(path.resolve('./public/static/images/all-posts/')).forEach(
+    (file) => {
+      collections.push(file);
+    }
+  );
+  return {
+    props: {
+      collections
+    }
+  };
 }
 
 const getChillingSvg = () => {
