@@ -37,7 +37,7 @@ export default function BlogPostCard({
         >
           <div className="h-44 md:h-32">
             <Image
-              alt="Sahil Jain"
+              alt={title}
               height={200}
               width={200}
               src={imageSrc}

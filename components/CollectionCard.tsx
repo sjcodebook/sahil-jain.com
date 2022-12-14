@@ -11,7 +11,7 @@ export default function CollectionCard({
 }) {
   return (
     <Link
-      href={`https://webbrainsmedia.com/blogs/${slug}`}
+      href={`https://www.facebook.com/photo?fbid=${slug}`}
       target="_blank"
       className={cn(
         'transform hover:scale-[1.01] transition-all',

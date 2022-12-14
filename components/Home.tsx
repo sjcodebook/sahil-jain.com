@@ -60,7 +60,12 @@ export const FeaturedBlogs = ({ classes = '' }) => (
     </h3>
     <p className="text-gray-600 dark:text-gray-400 mb-4">
       I write blogs on my website{' '}
-      <a href="https://webbrainsmedia.com/" className="underline">
+      <a
+        href="https://webbrainsmedia.com/"
+        className="underline"
+        target="_blank"
+        rel="noreferrer"
+      >
         webbrainsmedia.com
       </a>
       .
@@ -82,7 +87,8 @@ export const FeaturedBlogs = ({ classes = '' }) => (
         ))}
     </div>
     <Link
-      href="/blog"
+      href="https://webbrainsmedia.com/"
+      target="_blank"
       className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
     >
       {'Read all blogs'}
@@ -120,23 +126,22 @@ export const FeaturedCollections = ({ classes = '', collections = [] }) => (
     </h3>
     <div className="flex flex-wrap basis-1/3 flex-col md:flex-row justify-between">
       {collections.map((post) => {
-        if (post.includes('__featured__')) {
-          return (
-            <CollectionCard
-              key={post}
-              imageSrc={`/static/images/all-posts/${post}`}
-              slug={post}
-              gradient={getRandomGradientColor()}
-              style={{
-                marginBottom: '1rem'
-              }}
-            />
-          );
-        }
+        return (
+          <CollectionCard
+            key={post}
+            imageSrc={`/static/images/all-posts/${post}`}
+            slug={post.split('.')[0]}
+            gradient={getRandomGradientColor()}
+            style={{
+              marginBottom: '1rem'
+            }}
+          />
+        );
       })}
     </div>
     <Link
-      href="/blog"
+      href="https://www.facebook.com/webbrainsmedia"
+      target="_blank"
       className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
     >
       <>
@@ -182,7 +187,8 @@ export const FeaturedProjects = ({ classes = '' }) => (
         ))}
     </div>
     <Link
-      href="/blog"
+      href="https://github.com/sjcodebook"
+      target="_blank"
       className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
     >
       {'View all projects'}

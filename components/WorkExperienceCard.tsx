@@ -40,7 +40,12 @@ export default function WorkExperienceCard() {
                     <div className="font-bold text-gray-900 dark:text-white">
                       {work.position}
                     </div>
-                    <a href={work.company_website} className="underline">
+                    <a
+                      href={work.company_website}
+                      className="underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {work.company}
                     </a>
                   </div>
@@ -54,7 +59,8 @@ export default function WorkExperienceCard() {
                           result += ' ' + d.text;
                         }
                         if (d.type === 'link') {
-                          result += ` <a href="${d.href}" class="underline">${d.text}</a>`;
+                          result += ` <a href="${d.href}" class="underline" target="_blank"
+                          rel="noreferrer">${d.text}</a>`;
                         }
                       });
                       return (
