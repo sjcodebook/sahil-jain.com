@@ -19,6 +19,44 @@
       "isFeatured": true
     }
   ],
+  "projects": [
+    {
+      "title": "Business MGMT App",
+      "imageSrc": "/static/images/business-mgmt.png",
+      "slug": "Business-Management-System",
+      "isFeatured": true
+    },
+    {
+      "title": "WebBrainsMedia Blog",
+      "imageSrc": "/static/images/wbm.png",
+      "slug": "WBM",
+      "isFeatured": true
+    },
+    {
+      "title": "Whatsapp (Meteor.js)",
+      "imageSrc": "/static/images/meteor-chat.jpg",
+      "slug": "chat-app-in-meteor",
+      "isFeatured": true
+    },
+    {
+      "title": "MilesPay ETHIndia'22",
+      "imageSrc": "/static/images/miles-pay.png",
+      "slug": "MilesPay-ETHIndia-2022-Project",
+      "isFeatured": true
+    },
+    {
+      "title": "ETH Lottery Solidity",
+      "imageSrc": "/static/images/eth-lottery-solidity.png",
+      "slug": "ETH-Lottery_solidity",
+      "isFeatured": true
+    },
+    {
+      "title": "HARDHAT NFT ETH",
+      "imageSrc": "/static/images/pug-nft.png",
+      "slug": "HARDHAT-NFT-ETH",
+      "isFeatured": true
+    }
+  ],
   "work_experience": [
     {
       "company": "Parallel Finance",

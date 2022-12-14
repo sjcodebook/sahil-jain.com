@@ -7,6 +7,7 @@ import siteData from '../data.json';
 import BlogPostCard from './BlogPostCard';
 import CollectionCard from './CollectionCard';
 import WorkExperienceCard from './WorkExperienceCard';
+import ProjectCard from './ProjectCard';
 
 import { getRandomGradientColor } from '../utils/common';
 
@@ -159,24 +160,27 @@ export const FeaturedProjects = ({ classes = '' }) => (
     <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
       Featured Projects
     </h3>
-    <div className="flex gap-6 flex-col md:flex-row">
-      {siteData.blogs
-        .filter((blog) => blog.isFeatured)
-        .map((blog) => (
-          <BlogPostCard
-            key={blog.slug}
-            title={blog.title}
-            imageSrc={blog.imageSrc}
-            slug={blog.slug}
+    <div className="flex flex-wrap basis-1/3 flex-col md:flex-row justify-between">
+      {siteData.projects
+        .filter((project) => project.isFeatured)
+        .map((project) => (
+          <ProjectCard
+            key={project.slug}
+            title={project.title}
+            imageSrc={project.imageSrc}
+            slug={project.slug}
             gradient={getRandomGradientColor()}
+            style={{
+              marginBottom: '1rem'
+            }}
           />
         ))}
     </div>
     <Link
       href="/blog"
-      className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
+      className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
     >
-      {'Read all blogs'}
+      {'View all projects'}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
