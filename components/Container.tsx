@@ -8,7 +8,13 @@ import cn from 'classnames';
 import Footer from 'components/Footer';
 import MobileMenu from 'components/MobileMenu';
 
-function NavItem({ href, text, gradientBtn = false, outbound = false }) {
+function NavItem({
+  href,
+  text,
+  gradientBtn = false,
+  outbound = false,
+  noIcon = false
+}) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -39,7 +45,7 @@ function NavItem({ href, text, gradientBtn = false, outbound = false }) {
         ) : (
           <span className="capsize">{text}</span>
         )}
-        {outbound && (
+        {outbound && !noIcon && (
           <svg
             fill="#000000"
             xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +133,13 @@ export default function Container(props) {
               text="LinkedIn"
               outbound
             />
-            <NavItem href="/resume" text="Résumé / CV" gradientBtn />
+            <NavItem
+              href="/static/docs/Sahil_Jain_Resume.pdf"
+              text="Résumé / CV"
+              noIcon
+              outbound
+              gradientBtn
+            />
           </div>
           <button
             aria-label="Toggle Dark Mode"

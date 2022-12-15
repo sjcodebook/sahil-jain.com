@@ -45,7 +45,7 @@ export default function Footer() {
             ['LinkedIn', 'https://www.linkedin.com/in/sjcodebook/'],
             ['Facebook Page', 'https://www.facebook.com/webbrainsmedia'],
             ['WebBrainsMedia', 'https://webbrainsmedia.com/'],
-            ['Résumé / CV', 'resume']
+            ['Résumé / CV', '/static/docs/Sahil_Jain_Resume.pdf']
           ].map(([text, href]) => (
             <ExternalLink key={href} href={href}>
               {text}{' '}

@@ -129,7 +129,11 @@ export default function MobileMenu() {
             className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/resume" className="flex w-auto pb-4">
+            <Link
+              href="/static/docs/Sahil_Jain_Resume.pdf"
+              className="flex w-auto pb-4"
+              target="_blank"
+            >
               <span className="group relative inline-block focus:outline-none focus:ring dark:bg-gray-600">
                 <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
