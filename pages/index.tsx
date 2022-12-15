@@ -21,7 +21,7 @@ export default function Home({ collections = [] }) {
           <WorkExperience classes="mt-16" />
           <FeaturedCollections classes="mt-16" collections={collections} />
           <FeaturedProjects classes="mt-16" />
-          <div className="mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2">
+          <div className="mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2 animate-[pulse_3s_ease-in-out_infinite]">
             {getLovingSvg()}
           </div>
         </div>
