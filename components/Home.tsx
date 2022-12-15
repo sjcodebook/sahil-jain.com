@@ -28,8 +28,8 @@ export const Hero = () => (
         </div>
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-16">
-        Helping developers build a faster web. Teaching about web development,
-        serverless, and React / Next.js.
+        Exploring the world of decentralized web technologies and trying to
+        build some cool stuff with it. ✌️
       </p>
     </div>
     <Tilt glareEnable={false}>

@@ -61,12 +61,11 @@ export default function About() {
           </ul>
           <h2>Bio</h2>
           <p>
-            Hey, I'm Lee. I'm the VP of Developer Experience at{' '}
-            <a href="https://vercel.com/">Vercel</a>, where my team helps
-            developers build a faster web. I'm a Next.js contributor and help
-            lead our open-source communities. I'm passionate about frontend
-            development and have created courses on React, Next.js, and web
-            development. I'm an advisor and investor in early stage startups.
+            Hey, I'm Sahil. I'm a full stack web3 developer, Passionate about
+            decentralised tech. Why? Because i believe that technology is always
+            going to move forward and eventually we are going to be shifted
+            towards new and better tech and i want to play my part in making
+            this transition for humanity.
           </p>
           <h2>Some Random Pics</h2>
           <div className="flex space-x-4">
