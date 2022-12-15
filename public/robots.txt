@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Sitemap: https://sahiljain.io/sitemap.xml
+Allow: /
+
+# Host
+Host: https://www.sahiljain.io/
+
+# Sitemaps
+Sitemap: https://www.sahiljain.io/sitemap.xml
