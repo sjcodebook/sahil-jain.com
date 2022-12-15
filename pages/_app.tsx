@@ -1,7 +1,7 @@
 import 'styles/global.css';
 
 import { ThemeProvider } from 'next-themes';
-import { SessionProvider } from 'next-auth/react';
+import Script from 'next/script';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import { Analytics } from '@vercel/analytics/react';
@@ -14,30 +14,41 @@ export default function App({
   pageProps: { session, ...pageProps }
 }) {
   return (
-    <SessionProvider session={session}>
-      <ThemeProvider attribute="class">
-        <main className={interVariable.className}>
-          <Component {...pageProps} />
-          <ScrollToTop
-            smooth
-            component={
-              <Image
-                width={35}
-                height={35}
-                src="/static/images/arrow-up.png"
-                alt="Up Arrow"
-              />
-            }
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          />
-          <Analytics />
-        </main>
-      </ThemeProvider>
-    </SessionProvider>
+    <ThemeProvider attribute="class">
+      <main className={interVariable.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SWXEJFP6GG"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-SWXEJFP6GG');
+          `}
+        </Script>
+        <Component {...pageProps} />
+        <ScrollToTop
+          smooth
+          component={
+            <Image
+              width={35}
+              height={35}
+              src="/static/images/arrow-up.png"
+              alt="Up Arrow"
+            />
+          }
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        />
+        <Analytics />
+      </main>
+    </ThemeProvider>
   );
 }
