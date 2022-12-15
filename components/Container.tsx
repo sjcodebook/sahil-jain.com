@@ -103,7 +103,7 @@ export default function Container(props) {
         )}
       </Head>
       <div className=" px-4 py-1 text-white bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400">
-        <p className="text-center text-sm font-medium text-gray-800 dark:text-white animate-pulse">
+        <p className="text-center text-sm font-medium text-gray-800 dark:text-white animate-[pulse_3s_ease-in-out_infinite]">
           I am actively looking for a new role.
         </p>
       </div>
