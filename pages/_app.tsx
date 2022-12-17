@@ -17,10 +17,11 @@ export default function App({
     <ThemeProvider attribute="class">
       <main className={interVariable.className}>
         <Script
+          id="google-analytics"
           src="https://www.googletagmanager.com/gtag/js?id=G-SWXEJFP6GG"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics-code" strategy="lazyOnload">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
