@@ -24,7 +24,7 @@ export default function Home({ collections = [] }) {
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
-          <FeaturedBlogs classes="animate-scale-object" />
+          <FeaturedBlogs />
           <LazyLoad
             component={<WorkExperience classes="mt-16 animate-scale-object" />}
           />
