@@ -2,28 +2,40 @@ import { Suspense } from 'react';
 import fs from 'fs';
 import path from 'path';
 
+import { Hero, FeaturedBlogs } from '../components/Home';
 import Container from '../components/Container';
-import {
-  Hero,
-  FeaturedBlogs,
-  WorkExperience,
-  FeaturedCollections,
-  FeaturedProjects
-} from '../components/Home';
+import LazyLoad from '../components/common/LazyLoad';
+
+import dynamic from 'next/dynamic';
 
 export default function Home({ collections = [] }) {
+  const WorkExperience = dynamic(
+    async () => (await import('../components/Home')).WorkExperience
+  );
+  const FeaturedCollections = dynamic(
+    async () => (await import('../components/Home')).FeaturedCollections
+  );
+  const FeaturedProjects = dynamic(
+    async () => (await import('../components/Home')).FeaturedProjects
+  );
+
   return (
     <Suspense fallback={null}>
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
           <FeaturedBlogs />
-          <WorkExperience classes="mt-16" />
-          <FeaturedCollections classes="mt-16" collections={collections} />
-          <FeaturedProjects classes="mt-16" />
-          <div className="mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2 animate-[pulse_3s_ease-in-out_infinite]">
-            {getLovingSvg()}
-          </div>
+          <LazyLoad component={<WorkExperience classes="mt-16" />} />
+          <LazyLoad
+            component={
+              <FeaturedCollections classes="mt-16" collections={collections} />
+            }
+          />
+          <LazyLoad component={<FeaturedProjects classes="mt-16" />} />
+          <LazyLoad
+            component={<>{getLovingSvg()}</>}
+            classes="mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2 animate-[pulse_3s_ease-in-out_infinite]"
+          />
         </div>
       </Container>
     </Suspense>
