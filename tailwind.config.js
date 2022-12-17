@@ -88,7 +88,16 @@ module.exports = {
             }
           }
         }
-      })
+      }),
+      keyframes: {
+        scale: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1.0)' }
+        }
+      },
+      animation: {
+        'scale-object': 'scale 0.5s ease-in-out'
+      }
     }
   },
   variants: {

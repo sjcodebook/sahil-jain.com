@@ -24,14 +24,23 @@ export default function Home({ collections = [] }) {
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
-          <FeaturedBlogs />
-          <LazyLoad component={<WorkExperience classes="mt-16" />} />
+          <FeaturedBlogs classes="animate-scale-object" />
+          <LazyLoad
+            component={<WorkExperience classes="mt-16 animate-scale-object" />}
+          />
           <LazyLoad
             component={
-              <FeaturedCollections classes="mt-16" collections={collections} />
+              <FeaturedCollections
+                classes="mt-16 animate-scale-object"
+                collections={collections}
+              />
             }
           />
-          <LazyLoad component={<FeaturedProjects classes="mt-16" />} />
+          <LazyLoad
+            component={
+              <FeaturedProjects classes="mt-16 animate-scale-object" />
+            }
+          />
           <LazyLoad
             component={<>{getLovingSvg()}</>}
             classes="mx-auto transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2 animate-[pulse_3s_ease-in-out_infinite]"
