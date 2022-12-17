@@ -1,12 +1,11 @@
 import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import fs from 'fs';
 import path from 'path';
 
 import { Hero, FeaturedBlogs } from '../components/Home';
 import Container from '../components/Container';
 import LazyLoad from '../components/common/LazyLoad';
-
-import dynamic from 'next/dynamic';
 
 export default function Home({ collections = [] }) {
   const WorkExperience = dynamic(

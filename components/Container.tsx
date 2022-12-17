@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import NextLink from 'next/link';
 import cn from 'classnames';
 
-import Footer from 'components/Footer';
 import MobileMenu from 'components/MobileMenu';
+import LazyLoad from 'components/common/LazyLoad';
 
 function NavItem({
   href,
@@ -69,6 +70,8 @@ function NavItem({
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+
+  const Footer = dynamic(() => import('components/Footer'));
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
@@ -182,7 +185,7 @@ export default function Container(props) {
         className="flex flex-col justify-center px-6 bg-gray-50 dark:bg-gray-900"
       >
         {children}
-        <Footer />
+        <LazyLoad component={<Footer />} />
       </main>
     </div>
   );
