@@ -6,7 +6,6 @@ import path from 'path';
 import { Hero, FeaturedBlogs } from '../components/Home';
 import Container from '../components/Container';
 import LazyLoad from '../components/common/LazyLoad';
-import FireCursor from '../components/common/FireCursor';
 
 export default function Home({ collections = [] }) {
   const WorkExperience = dynamic(
@@ -22,9 +21,6 @@ export default function Home({ collections = [] }) {
   return (
     <Suspense fallback={null}>
       <Container>
-        <div className="hidden lg:block">
-          <FireCursor />
-        </div>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
           <FeaturedBlogs />

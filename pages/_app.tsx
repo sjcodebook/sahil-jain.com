@@ -7,6 +7,8 @@ import { Inter } from '@next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ScrollToTop from 'react-scroll-to-top';
 
+import FireCursor from '../components/common/FireCursor';
+
 const interVariable = Inter();
 
 export default function App({
@@ -30,6 +32,10 @@ export default function App({
           gtag('config', 'G-SWXEJFP6GG');
         `}
         </Script>
+
+        <div className="hidden lg:block">
+          <FireCursor />
+        </div>
 
         <Component {...pageProps} />
         <ScrollToTop
