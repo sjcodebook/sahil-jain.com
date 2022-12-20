@@ -68,69 +68,71 @@ export default function About() {
             this transition for humanity.
           </p>
           <h2>Some Random Pics</h2>
-          <div className="flex space-x-4">
-            <a href="/static/images/sahil-jain-334.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-334.jpg"
-                className="rounded-md"
-              />
-            </a>
-            <a href="/static/images/sahil-jain-3232.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-3232.jpg"
-                className="rounded-md"
-              />
-            </a>
-            <a href="/static/images/sahil-jain-4334.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-4334.jpg"
-                className="rounded-md"
-              />
-            </a>
-          </div>
-          <div className="flex space-x-4 mt-3">
-            <a href="/static/images/sahil-jain-223.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-223.jpg"
-                className="rounded-md"
-              />
-            </a>
-            <a href="/static/images/sahil-jain-333.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-333.jpg"
-                className="rounded-md"
-              />
-            </a>
-            <a href="/static/images/sahil-jain-1212.jpg">
-              <Image
-                alt="Sahil Jain Pics"
-                width={400}
-                height={400}
-                quality={100}
-                src="/static/images/sahil-jain-1212.jpg"
-                className="rounded-md"
-              />
-            </a>
+          <div>
+            <div className="flex space-x-4">
+              <a href="/static/images/sahil-jain-334.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-334.jpg"
+                  className="rounded-md"
+                />
+              </a>
+              <a href="/static/images/sahil-jain-3232.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-3232.jpg"
+                  className="rounded-md"
+                />
+              </a>
+              <a href="/static/images/sahil-jain-4334.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-4334.jpg"
+                  className="rounded-md"
+                />
+              </a>
+            </div>
+            <div className="flex space-x-4 mt-3">
+              <a href="/static/images/sahil-jain-223.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-223.jpg"
+                  className="rounded-md"
+                />
+              </a>
+              <a href="/static/images/sahil-jain-333.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-333.jpg"
+                  className="rounded-md"
+                />
+              </a>
+              <a href="/static/images/sahil-jain-1212.jpg">
+                <Image
+                  alt="Sahil Jain Pics"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  src="/static/images/sahil-jain-1212.jpg"
+                  className="rounded-md"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
