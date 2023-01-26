@@ -77,6 +77,21 @@
   ],
   "work_experience": [
     {
+      "company": "Datacy",
+      "company_website": "https://datacy.com/",
+      "company_logo_src": "/static/images/datacy.jpeg",
+      "position": "Full Stack Engineer",
+      "date": "Jan 2023 - Present",
+      "description": [
+        [
+          {
+            "type": "text",
+            "text": "Ongoing..."
+          }
+        ]
+      ]
+    },
+    {
       "company": "Parallel Finance",
       "company_website": "https://parallel.fi/",
       "company_logo_src": "/static/images/parallel_logo.jpg",
