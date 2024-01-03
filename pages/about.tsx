@@ -61,13 +61,14 @@ export default function About() {
           </ul>
           <h2>Bio</h2>
           <p>
-            Hey, I'm Sahil. I'm a full stack web3 developer, Passionate about
-            decentralised tech. Why? Because i believe that technology is always
-            going to move forward and eventually we are going to be shifted
-            towards new and better tech and i want to play my part in making
-            this transition for humanity.
+            Hey, I'm Sahil, a dynamic Full Stack Engineer crafting the future at
+            Datacy Inc. My passion lies in diving deep into the realms of web
+            and decentralized technologies. Why, you ask? Because I firmly
+            believe in the relentless march of technology. We're on the brink of
+            a tech evolution, and I aim to be a catalyst in this exciting
+            transition, shaping a better tomorrow for humanity.
           </p>
-          <h2>Some Random Pics</h2>
+          {/* <h2>Some Random Pics</h2>
           <div>
             <div className="flex space-x-4">
               <a href="/static/images/sahil-jain-334.jpg">
@@ -133,7 +134,7 @@ export default function About() {
                 />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Container>
