@@ -14,8 +14,8 @@ export default function About() {
           <ul>
             <li>
               Website:{' '}
-              <a target="_blank" rel="noreferrer" href="https://sahiljain.io">
-                https://sahiljain.io
+              <a target="_blank" rel="noreferrer" href="https://sahil-jain.com">
+                https://sahil-jain.com
               </a>
             </li>
             <li>
@@ -61,12 +61,11 @@ export default function About() {
           </ul>
           <h2>Bio</h2>
           <p>
-            Hey, I'm Sahil, a dynamic Full Stack Engineer crafting the future at
-            Datacy Inc. My passion lies in diving deep into the realms of web
-            and decentralized technologies. Why, you ask? Because I firmly
-            believe in the relentless march of technology. We're on the brink of
-            a tech evolution, and I aim to be a catalyst in this exciting
-            transition, shaping a better tomorrow for humanity.
+            Hey, I'm Sahil, a dynamic Full Stack Web Developer. My passion lies
+            in diving deep into the realms of web technologies. Why, you ask?
+            Because I firmly believe in the relentless march of technology.
+            We're on the brink of a tech evolution, and I aim to be a catalyst
+            in this exciting transition, shaping a better tomorrow for humanity.
           </p>
           {/* <h2>Some Random Pics</h2>
           <div>

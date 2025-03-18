@@ -20,7 +20,7 @@ export const Hero = () => (
             Sahil Jain{' '}
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-            Full Stack Engineer @ Datacy Inc.
+            Full Stack Web Developer
           </h2>
         </div>
         <div className="transition ease-in-out delay-100 hover:scale-110 duration-300 hover:skew-y-3 hover:translate-x-2 animate-[bounce_3s_ease-in-out_infinite]">
@@ -28,9 +28,9 @@ export const Hero = () => (
         </div>
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-16">
-        Venturing into the frontier of web and decentralized technologies, I'm
-        on a quest to engineer creations that are not just cool but
-        groundbreaking, redefining the realm of digital possibilities. ✌️
+        Venturing into the frontier of web technologies, I'm on a quest to
+        engineer creations that are not just cool but groundbreaking, redefining
+        the realm of digital possibilities for the future. ✌️
       </p>
     </div>
     <Tilt glareEnable={false}>

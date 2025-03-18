@@ -23,21 +23,21 @@ export default function Home({ collections = [] }) {
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
-          <FeaturedBlogs />
           <LazyLoad
-            component={<WorkExperience classes="mt-16 animate-scale-object" />}
+            component={<WorkExperience classes="mt-10 animate-scale-object" />}
           />
+          <LazyLoad
+            component={
+              <FeaturedProjects classes="mt-16 animate-scale-object" />
+            }
+          />
+          <LazyLoad component={<FeaturedBlogs classes="mt-16" />} />
           <LazyLoad
             component={
               <FeaturedCollections
                 classes="mt-16 animate-scale-object"
                 collections={collections}
               />
-            }
-          />
-          <LazyLoad
-            component={
-              <FeaturedProjects classes="mt-16 animate-scale-object" />
             }
           />
           <LazyLoad

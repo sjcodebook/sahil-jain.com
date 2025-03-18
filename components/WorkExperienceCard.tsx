@@ -64,7 +64,7 @@ export default function WorkExperienceCard() {
                     </svg>
                   </div>
                 </div>
-                <div className="p-3 text-xs italic font-normal text-gray-500 bg-gray-200 rounded-lg border border-gray-200 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300">
+                <div className="p-3 text-xs font-normal text-gray-500 bg-gray-200 rounded-lg border border-gray-200 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300">
                   <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-200">
                     {work.description.map((desc) => {
                       let result = '';

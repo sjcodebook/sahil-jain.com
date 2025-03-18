@@ -17,12 +17,12 @@ export default function Contact() {
             {getPointingSvg()}
           </div>
 
-          <h3 className="flex flex-row justify-between items-center font-bold text-2xl md:text-4xl md:pr-10 text-black dark:text-white mb-6 md:mb-0">
+          <h3 className="flex flex-row justify-between items-center font-bold text-2xl md:pr-10 text-black dark:text-white mb-6 md:mb-0">
             <a
-              href="mailto:hello@sahiljain.io"
+              href="mailto:jainsahil0846@gmail.com"
               className="hover:underline cursor-pointer"
             >
-              hello@sahiljain.io
+              jainsahil0846@gmail.com
             </a>
             {!isCopied ? (
               <Image
@@ -32,7 +32,7 @@ export default function Contact() {
                 height={20}
                 className="ml-3 cursor-pointer hover:transition-opacity hover:opacity-80"
                 onClick={() => {
-                  navigator.clipboard.writeText('hello@sahiljain.io');
+                  navigator.clipboard.writeText('jainsahil0846@gmail.com');
                   setIsCopied(true);
                   setTimeout(() => {
                     setIsCopied(false);

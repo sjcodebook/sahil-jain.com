@@ -51,9 +51,9 @@
       "isFeatured": true
     },
     {
-      "title": "Whatsapp (Meteor.js)",
-      "imageSrc": "/static/images/meteor-chat.jpg",
-      "slug": "chat-app-in-meteor",
+      "title": "Next.js Portfolio",
+      "imageSrc": "/static/images/portfolio-in-nextjs.png",
+      "slug": "sahil-jain.com",
       "isFeatured": true
     },
     {
@@ -81,12 +81,60 @@
       "company_website": "https://datacy.com/",
       "company_logo_src": "/static/images/datacy.jpeg",
       "position": "Full Stack Engineer",
-      "date": "Jan 2023 - Present",
+      "date": "Jan 2023 - Mar 2025 · 2 yrs 3 mos",
       "description": [
         [
           {
             "type": "text",
-            "text": "Ongoing..."
+            "text": "Spearheaded Consumer-to-Business (C2B) Platform Development: Led end-to-end implementation of consumer-focused features, redesigned the user interface, and resolved critical bugs."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Developed Comprehensive Referral Flow: Created the full referral program flow, including landing pages, C2B dashboard integration with analytics, robust database architecture, and custom CLI scripts for rewards evaluation."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Integrated Klaviyo: Leveraged Klaviyo APIs and webhooks to automate consumer workflows, as well as transactional and marketing email processes."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Transitioned Reward Systems: Directed the shift from a dollar-based rewards system to a native Datacy Coin model, enhancing platform engagement."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Redesigned Website UI: Reimagined the Datacy website interface using Next.js, improving both aesthetics and user experience."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Enhanced Chrome Extension: Implemented consumer-focused features in the Datacy Chrome extension to boost functionality."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Upgraded Management Dashboard: Added key features to the internal management dashboard (built with Svelte and Python’s FastAPI) to better support team needs."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Crafted B2B Platform Features: Developed business-oriented functionalities on the B2B platform to meet corporate requirements."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Integrated Mixpanel: Enabled advanced analytics by integrating Mixpanel, supporting data-driven decision-making."
           }
         ]
       ]
@@ -95,118 +143,93 @@
       "company": "Parallel Finance",
       "company_website": "https://parallel.fi/",
       "company_logo_src": "/static/images/parallel_logo.jpg",
-      "position": "Web3 Developer",
+      "position": "Full-Stack Web Developer",
       "date": "Nov 2021 - Oct 2022 · 1 yr",
       "description": [
         [
           {
             "type": "text",
-            "text": "Worked on"
+            "text": "Contributed to the development of the "
           },
           {
             "type": "link",
             "href": "https://crowdloan.parallel.fi/#/",
-            "text": "Polkadot and Kusama crowdloan App"
-          },
-          {
-            "type": "text",
-            "text": "UI."
+            "text": "Polkadot and Kusama Crowdloan App UI."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Worked on"
+            "text": "Enhanced the Para and Heiko claim UI interface"
           },
           {
             "type": "link",
             "href": "https://crowdloan.parallel.fi/#/",
-            "text": "Para and Heiko claim"
-          },
-          {
-            "type": "text",
-            "text": "UI."
+            "text": "Para and Heiko claim UI interface."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Worked on"
+            "text": "Played a pivotal role in crafting the UI for the "
           },
           {
             "type": "link",
             "href": "https://app.parallel.fi/swap",
-            "text": "Automated Market Maker (Swap and Liquidity Market) App"
+            "text": "Automated Market Maker"
           },
           {
             "type": "text",
-            "text": "UI."
+            "text": ", encompassing Swap and Liquidity Markets."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Worked on"
+            "text": "Pioneered the design and functionality of the "
           },
           {
             "type": "link",
             "href": "https://app.parallel.fi/lendAndBorrow",
-            "text": "Parallel Money Market App"
-          },
-          {
-            "type": "text",
-            "text": "UI."
+            "text": "Parallel Money Market App UI."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Created UI Components for Parallel Design System on Storybook."
+            "text": "Developed robust UI components for the Parallel Design System, showcased on Storybook."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Worked on"
+            "text": "Led the design efforts for Parallel Wallet's Chrome extension "
           },
           {
             "type": "link",
             "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
-            "text": "Parallel Wallet chrome extension's"
+            "text": "Parallel Wallet's Chrome extension"
           },
           {
             "type": "text",
-            "text": "UI for dashboard, transfers, etc."
+            "text": ", focusing on dashboard and transfer functionalities."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Enabled"
+            "text": "Integrated asset-importing capabilities from Ledger Wallet into the "
           },
           {
             "type": "link",
             "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
-            "text": "Parallel Wallet chrome extension"
-          },
-          {
-            "type": "text",
-            "text": "to be able to import assets from ledger wallet."
+            "text": "Parallel Wallet Chrome extension."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Enabled"
-          },
-          {
-            "type": "link",
-            "href": "https://chrome.google.com/webstore/detail/parallel-wallet/jbkgjmpfammbgejcpedggoefddacbdia",
-            "text": "Parallel Wallet chrome extension"
-          },
-          {
-            "type": "text",
-            "text": "to be able to sign transactions from ledger wallet."
+            "text": "Empowered the Parallel Wallet Chrome extension with transaction-signing functionality from Ledger Wallet."
           }
         ]
       ]
@@ -221,31 +244,31 @@
         [
           {
             "type": "text",
-            "text": "Maintained the Coding Elements public facing website written In NextJs."
+            "text": "Spearheaded the maintenance of the Coding Elements public website, crafted using Next.js."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Added Features like Class Scheduler, Certificate Generator, Course Progress tracker etc. in Coding Elements Ops Platform written in ReactJs."
+            "text": "Enhanced the Coding Elements Ops Platform (built in React.js) by introducing features such as a Class Scheduler, Certificate Generator, and Course Progress Tracker."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Maintained The Coding Elements E-Learning Platform written in React]s and uses Firebase’s functions, db, hosting and auth services."
+            "text": "Managed the continuity and functionality of The Coding Elements E-Learning Platform, designed in React.js and integrated with Firebase services (functions, database, hosting, and authentication)."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Integrated Coding Elements python learning module with Government Of India's Atal Tinkering Labs Project."
+            "text": "Successfully integrated the Coding Elements Python learning module with the Government of India's esteemed Atal Tinkering Labs Project."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Developed APIs to enable integration of Coding Elements Learning Modules with third party E-learning platforms."
+            "text": "Engineered APIs facilitating seamless integration of Coding Elements Learning Modules with external E-learning platforms."
           }
         ]
       ]
@@ -260,37 +283,43 @@
         [
           {
             "type": "text",
-            "text": "Maintained the official website redcarpetup.com."
+            "text": "Oversaw and managed the upkeep of the official website, redcarpetup.com."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Developed full funnel for card lost and claim process."
+            "text": "Engineered a comprehensive funnel for card loss and claim procedures."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Developed rewards program for the official redcarpetUp app."
+            "text": "Designed a robust rewards program for the official RedCarpet app."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Integrated Code Coverage tools to Automation frameworks."
+            "text": "Seamlessly integrated Code Coverage tools into automation frameworks."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Maintained and added features in Primer (in-house developed ops platform in react.js."
+            "text": "Crafted and optimized APIs using Python's Flask framework, ensuring enhanced feature implementation and peak performance."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Scoped, implemented, tested, and deployed new features and versions of core applications, databases, and utilities."
+            "text": "Contributed to and maintained 'Primer', our proprietary ops platform, developed in React.js."
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "text": "Strategically scoped, executed, and rolled out new features, as well as updates to core applications databases, and utilities."
           }
         ]
       ]
@@ -305,19 +334,19 @@
         [
           {
             "type": "text",
-            "text": "Employed an agile development process with daily standups and Trello for task management."
+            "text": "Implemented an agile workflow, leveraging daily stand-ups and utilizing Trello for efficient task management."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Intimately familiar with UI/UX styling frameworks including Bootstrap, Foundation, and Semantic UI."
+            "text": "Possess in-depth expertise with UI/UX styling frameworks such as Bootstrap, Foundation, and Semantic UI."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Developed web applications using meteor.js"
+            "text": "Expertly crafted web applications utilizing Meteor.js."
           }
         ]
       ]
