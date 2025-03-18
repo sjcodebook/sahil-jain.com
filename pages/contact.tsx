@@ -17,7 +17,7 @@ export default function Contact() {
             {getPointingSvg()}
           </div>
 
-          <h3 className="flex flex-row justify-between items-center font-bold text-2xl md:pr-10 text-black dark:text-white mb-6 md:mb-0">
+          <h3 className="flex flex-row justify-between items-center font-bold text-xl md:text-2xl md:pr-10 text-black dark:text-white mb-6 md:mb-0">
             <a
               href="mailto:jainsahil0846@gmail.com"
               className="hover:underline cursor-pointer"
