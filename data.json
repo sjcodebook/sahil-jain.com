@@ -57,15 +57,15 @@
       "isFeatured": true
     },
     {
-      "title": "MilesPay ETHIndia'22",
-      "imageSrc": "/static/images/miles-pay-eth.png",
-      "slug": "MilesPay-ETHIndia-2022-Project",
+      "title": "ProcrastiNix",
+      "imageSrc": "/static/images/procrastinix.png",
+      "slug": "Procrastinix",
       "isFeatured": true
     },
     {
-      "title": "ETH Lottery Solidity",
-      "imageSrc": "/static/images/eth-lottery-solidity.png",
-      "slug": "ETH-Lottery_solidity",
+      "title": "MilesPay ETHIndia'22",
+      "imageSrc": "/static/images/miles-pay-eth.png",
+      "slug": "MilesPay-ETHIndia-2022-Project",
       "isFeatured": true
     },
     {
