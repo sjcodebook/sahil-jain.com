@@ -63,15 +63,15 @@
       "isFeatured": true
     },
     {
-      "title": "MilesPay ETHIndia'22",
-      "imageSrc": "/static/images/miles-pay-eth.png",
-      "slug": "MilesPay-ETHIndia-2022-Project",
+      "title": "LinkedIn Scraper",
+      "imageSrc": "/static/images/linkedin-scraper.png",
+      "slug": "LinkedIn-Profile-Data-Scraper-App",
       "isFeatured": true
     },
     {
-      "title": "HARDHAT NFT ETH",
-      "imageSrc": "/static/images/pug-nft.png",
-      "slug": "HARDHAT-NFT-ETH",
+      "title": "MilesPay ETHIndia'22",
+      "imageSrc": "/static/images/miles-pay-eth.png",
+      "slug": "MilesPay-ETHIndia-2022-Project",
       "isFeatured": true
     }
   ],
