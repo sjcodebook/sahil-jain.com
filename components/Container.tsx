@@ -79,8 +79,8 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Sahil Jain – Full Stack Web Developer',
-    description: `Full Stack Web developer, Web3 enthusiast, and Content Creator.`,
+    title: 'Sahil Jain – Full Stack Engineer',
+    description: `Full Stack Engineer, Web3 enthusiast, and Content Creator.`,
     image: 'https://sahiljain.io/avatar.jpg',
     type: 'website',
     ...customMeta

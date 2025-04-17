@@ -39,6 +39,12 @@
   ],
   "projects": [
     {
+      "title": "Emotion",
+      "imageSrc": "/static/images/emotion.png",
+      "slug": "Emotion",
+      "isFeatured": true
+    },
+    {
       "title": "Business MGMT App",
       "imageSrc": "/static/images/business-mgmt.png",
       "slug": "Business-Management-System",

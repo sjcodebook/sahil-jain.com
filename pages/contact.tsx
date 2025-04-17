@@ -19,10 +19,10 @@ export default function Contact() {
 
           <h3 className="flex flex-row justify-between items-center font-bold text-xl md:text-2xl md:pr-10 text-black dark:text-white mb-6 md:mb-0">
             <a
-              href="mailto:jainsahil0846@gmail.com"
+              href="mailto:hello@sahil-jain.com"
               className="hover:underline cursor-pointer"
             >
-              jainsahil0846@gmail.com
+              hello@sahil-jain.com
             </a>
             {!isCopied ? (
               <Image
@@ -32,7 +32,7 @@ export default function Contact() {
                 height={20}
                 className="ml-3 cursor-pointer hover:transition-opacity hover:opacity-80"
                 onClick={() => {
-                  navigator.clipboard.writeText('jainsahil0846@gmail.com');
+                  navigator.clipboard.writeText('hello@sahil-jain.com');
                   setIsCopied(true);
                   setTimeout(() => {
                     setIsCopied(false);
