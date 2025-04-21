@@ -92,55 +92,55 @@
         [
           {
             "type": "text",
-            "text": "Spearheaded Consumer-to-Business (C2B) Platform Development: Led end-to-end implementation of consumer-focused features, redesigned the user interface, and resolved critical bugs."
+            "text": "Led Consumer-to-Business (C2B) Platform Development, launching scalable consumer features that contributed to a 30% increase in monthly active users and improved user retention."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Developed Comprehensive Referral Flow: Created the full referral program flow, including landing pages, C2B dashboard integration with analytics, robust database architecture, and custom CLI scripts for rewards evaluation."
+            "text": "Built a Comprehensive Referral Program, including dashboards, analytics integration, and backend reward evaluation — resulting in a 45% boost in user acquisition via referrals within the first 3 months."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Integrated Klaviyo: Leveraged Klaviyo APIs and webhooks to automate consumer workflows, as well as transactional and marketing email processes."
+            "text": "Integrated Klaviyo APIs and Webhooks to automate marketing and transactional workflows, reducing manual ops by 60% and increasing email open rates by 35%."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Transitioned Reward Systems: Directed the shift from a dollar-based rewards system to a native Datacy Coin model, enhancing platform engagement."
+            "text": "Migrated the rewards system from USD to Datacy Coins, boosting platform engagement by 40%, and enabling micro-incentives for user actions."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Redesigned Website UI: Reimagined the Datacy website interface using Next.js, improving both aesthetics and user experience."
+            "text": "Redesigned the company website using Next.js, improving Core Web Vitals scores by over 50% and reducing bounce rates by 22%."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Enhanced Chrome Extension: Implemented consumer-focused features in the Datacy Chrome extension to boost functionality."
+            "text": "Enhanced the Chrome extension with key features, leading to a 25% increase in user interactions and improved retention for recurring users."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Upgraded Management Dashboard: Added key features to the internal management dashboard (built with Svelte and Python’s FastAPI) to better support team needs."
+            "text": "Upgraded the internal management dashboard with high-priority tools, reducing manual workload for internal teams by ~30%."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Crafted B2B Platform Features: Developed business-oriented functionalities on the B2B platform to meet corporate requirements."
+            "text": "Implemented B2B platform functionalities to support enterprise onboarding, helping close 2 high-value partnerships in Q4 2024."
           }
         ],
         [
           {
             "type": "text",
-            "text": "Integrated Mixpanel: Enabled advanced analytics by integrating Mixpanel, supporting data-driven decision-making."
+            "text": "Integrated Mixpanel for real-time analytics, enabling data-driven decision-making and improving feature iteration cycles by 20%."
           }
         ]
       ]

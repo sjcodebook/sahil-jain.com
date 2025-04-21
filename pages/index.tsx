@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import fs from 'fs';
 import path from 'path';
 
-import { Hero, FeaturedBlogs } from '../components/Home';
+import { Hero, FeaturedBlogs, VideoResume } from '../components/Home';
 import Container from '../components/Container';
 import LazyLoad from '../components/common/LazyLoad';
 
@@ -23,6 +23,7 @@ export default function Home({ collections = [] }) {
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-2">
           <Hero />
+          <VideoResume />
           <LazyLoad
             component={<WorkExperience classes="mt-10 animate-scale-object" />}
           />

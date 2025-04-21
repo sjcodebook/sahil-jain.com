@@ -54,6 +54,25 @@ export const Hero = () => (
   </div>
 );
 
+export const VideoResume = ({ classes = 'w-full' }) => (
+  <div className={classes}>
+    <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+      Video Resume
+    </h3>
+    <p className="text-gray-600 dark:text-gray-400 mb-4">
+      Watch my creative video resume showcasing my skills, projects, and
+      personality:
+    </p>
+    <iframe
+      className="w-full h-[400px] md:h-[500px] mb-4"
+      src="https://www.youtube.com/embed/R6fa5HlEzek"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+);
+
 export const FeaturedBlogs = ({ classes = '' }) => (
   <div className={classes}>
     <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
